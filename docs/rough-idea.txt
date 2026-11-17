@@ -1,0 +1,60 @@
+rough idea - gta quantum mod
+
+just dumping this so i dont forget. not a plan.
+
+---
+
+idea: ur walking in los santos and some sketchy guy comes up to u on the corner. says he has "quantum medicine" cures everything, sickness bad luck bad vibes whatever. 10 bucks
+
+u drink it. doesnt cure anything lol. the city starts going wrong around u and u can suddenly do stuff u shouldnt be able to
+
+basically the dealer is selling u a quantum state
+
+first plan (way too big probably):
+- guy walks up, u say yes or no, pay 10, ur character drinks it
+- then ur high for like a minute. screen goes wavy, purple and blue colors, cars and people glitching, u walk all weird
+- then everything goes black and u wake up somewhere else
+- a MAZE. different every time, made by the quantum stuff. doors that keep flickering open and closed until u look at them (like the observing thing in quantum haha)
+- if u take too long u wake up in an alley, almost dead, 500 dollars gone
+- if u get out u're back where u drank it and the guy is gone
+
+wanted to use every quantum thing moth gives u in one go
+
+---
+
+what happened
+
+maze got cut first. making a whole maze map in gta is way beyond me rn, and moving the player in and out of it seemed like it would break
+
+wrote down some easier ideas:
+ random wanted level, cars that change when u look at them, 2 random people linked so if u hit one the other one gets hurt, a weather god thing
+
+weather god (ai brainstorming) was the easiest so v1 became that (more chaos around u = more likely to get a storm). but i made each weather actually do something not just look different
+ sunny -> run faster, lose a star
+ cloudy -> slow motion, cops ignore u
+ rain -> lightning blasts, cars slide everywhere
+ snow -> cars and people get launched in the air
+thats kinda the "drug gives u powers" part, just without the drug yet
+
+then brought the dealer back in v2. press F10 and a scientist guy walks up, sells u a bottle, longer trip. way better start for the video than me just standing there pressing a button
+
+the linked people idea came back as a linked car instead (a car follows u around with a laser line and u can throw it lol)
+
+v4 the dealer has 3 drinks
+ $10 normal trip + trippy screen
+ $100 stronger + u always get the linked car
+ $500 overdose. everything at once and then the cops come after u hard when it wears off
+the cops thing is basically what's left of the wake up in an alley ending
+
+---
+
+want to make next: CHAOTIC MODE
+like a 5th mode or a switch where its just pure chaos. no picking one mode, everything at once?? storm + launching + slow motion all mixed. the danger zones moving around, maybe it keeps switching modes every few seconds. cops come faster. probably only like 20 sec or the game will die lol
+maybe let the quantum thing decide how crazy it gets, more chaos in = more chaos out
+need to check it doesnt lag
+
+other stuff i still like but never did:
+- the maze for real, with the flickering doors
+- people on the street saying weird stuff while ur high ("are you... observing me?")
+- controls going backwards or slow while ur high
+- a teleport dash. it was actually in v4 for a bit but it kept messing up so i swapped it for just running faster

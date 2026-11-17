@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- IMPORTANT: Must be .NET Framework 4.8 — SHVDN does not support .NET 5+ -->
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>QuantumWeatherMod</AssemblyName>
+    <RootNamespace>QuantumWeatherMod</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>7.3</LangVersion>
+
+    <!--
+      !! CHANGE THIS PATH to your GTA V installation folder !!
+      After build, the DLL is auto-copied to GTA V/scripts/
+      Common paths:
+        C:\Program Files\Steam\steamapps\common\Grand Theft Auto V\scripts\
+        C:\Program Files\Epic Games\GTAV\scripts\
+        C:\Program Files\Rockstar Games\Grand Theft Auto V\scripts\
+    -->
+    <GtaScriptsPath>C:\Program Files\Steam\steamapps\common\Grand Theft Auto V\scripts\</GtaScriptsPath>
+  </PropertyGroup>
+
+  <!-- Auto-copy DLL to GTA scripts folder on every build (only if folder exists) -->
+  <Target Name="CopyToGTA" AfterTargets="Build" Condition="Exists('$(GtaScriptsPath)')">
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll"
+          DestinationFolder="$(GtaScriptsPath)"
+          ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)Newtonsoft.Json.dll"
+          DestinationFolder="$(GtaScriptsPath)"
+          ContinueOnError="true" />
+    <Copy SourceFiles="$(ProjectDir)QuantumWeather.ini"
+          DestinationFolder="$(GtaScriptsPath)"
+          ContinueOnError="true" />
+    <Message Text="✅ Copied to GTA V scripts folder: $(GtaScriptsPath)" Importance="high" />
+  </Target>
+
+  <ItemGroup>
+    <!-- NuGet packages (auto-restore) -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <!-- Allows building .NET Framework 4.8 via `dotnet build` in VS Code without installing VS 2022 -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Standard .NET Framework 4.8 assemblies used by the mod -->
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+
+    <!--
+      Manual DLL references — place these in a /lib folder inside the project
+      Download from:
+        ScriptHookVDotNet:  https://github.com/scripthookvdotnet/scripthookvdotnet/releases
+        LemonUI:            https://github.com/LemonUIbyLemon/LemonUI/releases
+    -->
+    <Reference Include="ScriptHookVDotNet3">
+      <HintPath>lib\ScriptHookVDotNet3.dll</HintPath>
+      <Private>false</Private>  <!-- Don't copy to output — already in GTA folder -->
+    </Reference>
+
+    <Reference Include="LemonUI.SHVDN3">
+      <HintPath>lib\LemonUI.SHVDN3.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
