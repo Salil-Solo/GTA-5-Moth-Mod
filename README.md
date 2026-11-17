@@ -1,6 +1,6 @@
 # Quantum Reality Shift
 
-A single-player GTA V mod I built for the Moth Quantum × GTA V Mod Bounty (it took 1st place). Pressing F6 sends a snapshot of what's going on around you (wanted level, traffic, crowds) to Moth's Atlas API, and the result decides which of four "reality modes" the city flips into for the next 30 seconds.
+A single-player GTA V mod I built for the Moth Quantum × GTA V Mod Bounty. Pressing F6 sends a snapshot of what's going on around you (wanted level, traffic, crowds) to Moth's Atlas API, and the result decides which of four "reality modes" the city flips into for the next 30 seconds.
 
 Start with the [V4 README](v4/README_V4.md) for hotkeys, gameplay and install steps.
 
@@ -45,4 +45,4 @@ If `GtaScriptsPath` in `v4/QuantumRealityShiftV4.csproj` points to your `GTA V\s
 
 The key is read from the `MOTH_API_KEY` environment variable first, then from a local `QuantumWeather.ini`, which is gitignored. It's never written to the log.
 
-Story Mode only, dont use this in GTA Online.
+Story Mode only, don't use this in GTA Online.
